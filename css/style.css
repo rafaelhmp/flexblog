@@ -47,6 +47,23 @@ img {
 
 .superinfo a {
   color: white;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.superinfo a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: .2rem;
+  background-color: white;
+  left: 0;
+  bottom: 0;
+  transition: .3s;
+}
+
+.superinfo a:hover::after {
+  width: 100%;
 }
 
 /* Menu */
@@ -252,6 +269,13 @@ img {
   font-size: 2.25em;
   padding: 15px 0;
   text-align: center;
+  transition: all .3s;
+}
+
+.preco-item a:hover {
+  background: #222;
+  color: #f7f7f7;
+  border-color: #222;
 }
 
 @media (max-width: 800px) {
@@ -312,4 +336,93 @@ img {
   font-size: 1.25em;
   line-height: 1.4;
   color: #7c7c7c;
+}
+
+/* Newsletter */
+
+.newsletter {
+  background: #f7f7f7;
+  padding: 60px calc((100% - 960px) / 2);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.newsletter-info {
+  flex: 1 1 260px;
+  margin: 0 10px;
+}
+
+.newsletter-info h1 {
+  font-size: 3em;
+  color: #a4a4a4;
+}
+
+.newsletter-info p {
+  font-size: 1.25em;
+  font-style: italic;
+  max-width: 230px;
+  color: #7c7c7c;
+  margin-bottom: 10px;
+}
+
+.newsletter-form {
+  flex: 2 1 260px;
+  margin: 0 10px;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  flex: 3 1 260px;
+  font-size: 1.25em;
+  color: #7c7c7c;
+  font-style: italic;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  border: 4px solid #2c70ff;
+  background: transparent;
+  padding: 15px 10px;
+  margin: 0px;
+  border-radius: 0px;
+}
+
+.newsletter-form button {
+  flex: 1 1 200px;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  font-size: 2.25em;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #2c70ff;
+  color: white;
+  margin: 0px;
+  cursor: pointer;
+  border: none;
+  padding: 15px 10px;
+  transition: .3s all;
+}
+
+@media (max-width: 600px) {
+  .newsletter-form button {
+    font-size: 1.5em;
+  }
+}
+
+.newsletter-form button:hover {
+  background: #122ab2;
+}
+/* Footer */
+
+.footer {
+  background: #2c70ff;
+  display: flex;
+  flex-wrap: wrap;
+  height: 200px;
+  align-items: center;
+}
+
+.footer p {
+  flex: 1;
+  text-align: center;
+  font-size: 2.25em;
+  color: #122ab2;
 }
