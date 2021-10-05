@@ -55,7 +55,7 @@ img {
   content: '';
   position: absolute;
   width: 0;
-  height: .2rem;
+  height: .1rem;
   background-color: white;
   left: 0;
   bottom: 0;
